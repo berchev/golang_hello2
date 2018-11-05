@@ -6,3 +6,12 @@ before_script:
 - ls -al
 script:
 - bash test.sh
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: HD4tUxR1/ghvw7szPlEhXSwZ+PK7UcE+Q0QZ78HRVa2zXsSbQNNeBgZqDBTQiYPHh/5mqfakaFZfpayayjRmtbMDHcndJNm1gx/Fa7/PTctGrJ1p2e1rqBLNxlwsCdkfOvGcPrwRYj184ZTj4f72R5hODNbon4wNbenxbMvqb5ak/ZxJG+k0ayqnz06qUUeNpGKtNGlXSo9tH411hwrwqnIXN2P0cbFMULqYSA4RVMW1oDHWuQqK13vTNt2PBXKWStpaD60ujp6jE82L91w6hpS9w5o7+tl2N9wvx8LKC1NiDac4I/pU1G9YRFDpyc3JH4sc4naK9amjqwQ+GihLV7Fcq6THMtprUv7AptQJnpa/HzLL+jRMVgGFykCl+vUuyOU583FZF+3Az0qiNu3w7Z5RxD9qhYhpRRC27E3qMwodY2PpbKzavuCOq+yH529gKRzyiHPUUTOc7BHscQuaWqljaEWTLH9GpFsxl/uakg9aAdT43s9TKnufxJUqK2/FDyFIZXhAOlV6bvgriXREU9gAGFDN0cBnEIEPx8rCrtV4dtqQTN5iVMEj2t2Nimm0Asb342xBjwOAXieYeL2lUIY+EC7OL7dvco/Fpe4MMVfilgp9futx5k4IzoqJ3gXp+Y/9HmEuJElAQ2eWELXT51mzujrL8SFIvaVyP8c8UoU=
+  file: main
+  on:
+    repo: berchev/golang_hello2
+    tags: true
